@@ -19,4 +19,15 @@ export const rules: SpecialRule[] = [
             return discount
         }
     },
+    {
+        RuleID: 3,
+        Name: "we will bundle in a free VGA adapter free of charge with every MacBook Pro sold",
+        calculateDiscount: (scannedProducts: Product[]) => {
+            const mbps = scannedProducts.filter(item => item.SKU === 'mbp')
+            const vgas = scannedProducts.filter(item => item.SKU === 'vga')
+            const min = mbps.length < vgas.length? mbps.length : vgas.length
+            const discount = min* 30
+            return discount
+        }
+    },
 ]

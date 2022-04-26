@@ -1,6 +1,6 @@
 import {Checkout} from "../service/Checkout";
 import {rules} from "../data/rules";
-import {atv, ipd, vga} from "../data/products";
+import {atv, ipd, mbp, vga} from "../data/products";
 import {expect} from "chai";
 
 describe("Checkout",  () => {
@@ -26,5 +26,13 @@ describe("Checkout",  () => {
         co.scan(ipd);
         const total  = co.total();
         expect(total).to.eq(2718.95)
+    })
+
+    it("SKUs Scanned: vga, mbp Total expected: $1399.99",  function () {
+        const co = new Checkout(rules);
+        co.scan(mbp);
+        co.scan(vga);
+        const total  = co.total();
+        expect(total).to.eq(1399.99)
     })
 })

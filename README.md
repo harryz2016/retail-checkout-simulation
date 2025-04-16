@@ -1,5 +1,5 @@
 # retail-checkout-simulation
-Zeller is starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue
+You are starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue
 
 
 | SKU     | Name        | Price    |
@@ -37,13 +37,3 @@ Total expected: $249.00
 
 SKUs Scanned: atv, ipd, ipd, atv, ipd, ipd, ipd
 Total expected: $2718.95
-
-Notes on implementation:
-
-- use **Typescript**
-- try not to spend more than 2 hours maximum. (We don't want you to lose a weekend over this!)
-- don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
-- don't worry about making a command line interface to the application
-- don't use any frameworks
-
-When you've finished, send through the link to your github-repo.
